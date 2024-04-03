@@ -31,6 +31,6 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
       - name: Package
-        run: dotnet package --configuration Release
+        run: dotnet pack --configuration Release
       - name: Publish
         run: dotnet nuget push ArgsConfigReader/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
